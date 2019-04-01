@@ -7,7 +7,7 @@ expenses = input_array[4].to_f
 ebit = (price*users+2*price*users_premium-expenses)
 
 if ebit > 0
-  earnings = ebit*0.75
+  earnings = ebit*0.65
 else
   earnings = ebit
 end
