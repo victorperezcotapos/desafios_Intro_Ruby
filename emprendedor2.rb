@@ -1,9 +1,9 @@
 input_array = ARGV
-price = input_array[0].to_f
-users = input_array[1].to_i
-users_premium = input_array[2].to_i
-users_free = input_array[3].to_i
-expenses = input_array[4].to_f
+price = ARGV[0].to_f
+users = ARGV[1].to_i
+users_premium = ARGV[2].to_i
+users_free = ARGV[3].to_i
+expenses = ARGV[4].to_f
 ebit = (price*users+2*price*users_premium-expenses)
 
 if ebit > 0

@@ -1,7 +1,6 @@
-input_array = ARGV
-price = input_array[0].to_f
-users = input_array[1].to_i
-expenses = input_array[2].to_f
+price = ARGV[0].to_f
+users = ARGV[1].to_i
+expenses = ARGV[2].to_f
 ebit = (price*users-expenses)
 
 if ebit > 0
