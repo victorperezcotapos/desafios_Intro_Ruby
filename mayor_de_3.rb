@@ -1,11 +1,12 @@
-
+def mayor_de_3(a,b,c)
+  if a > b && a > c
+    puts a
+  elsif b > c
+    puts b
+  else
+    puts c
+  end
+end
 
 numeros = [ARGV[0].to_i,ARGV[1].to_i,ARGV[2].to_i]
-
-if numeros[0] > numeros[1] && numeros[0] > numeros[2]
-  puts numeros[0]
-elsif numeros[1] > numeros[2]
-  puts numeros[1]
-else
-  puts numeros[2]
-end
+mayor_de_3(numeros[0],numeros[1],numeros[2])
