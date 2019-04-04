@@ -1,5 +1,5 @@
-coordenada_x = [ARGV[0].to_i,ARGV[2].to_i,ARGV[4].to_i,ARGV[6].to_i,ARGV[8].to_i]
-coordenada_y = [ARGV[1].to_i,ARGV[3].to_i,ARGV[5].to_i,ARGV[7].to_i,ARGV[9].to_i]
+coordenada_x = [ARGV[0].to_f,ARGV[2].to_f,ARGV[4].to_f,ARGV[6].to_f,ARGV[8].to_f]
+coordenada_y = [ARGV[1].to_f,ARGV[3].to_f,ARGV[5].to_f,ARGV[7].to_f,ARGV[9].to_f]
 
 distancias = Array.new
 
