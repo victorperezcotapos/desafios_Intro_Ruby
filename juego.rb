@@ -2,15 +2,15 @@
 opciones_pc = ['piedra','papel','tijera']
 eleccion_pc = rand(3)
 
-if ARGV[0] == 'piedra' && eleccion_pc == 1 || ARGV[0] == 'papel' && eleccion_pc == 2 || ARGV[0] == 'tijera' && eleccion_pc == 0
+if opciones_pc.include?(ARGV[0])
   puts "Computador juega #{opciones_pc[eleccion_pc]}"
-  puts 'Perdiste'
-elsif ARGV[0]=='papel'&& eleccion_pc == 1 || ARGV[0] == 'tijera' && eleccion_pc == 2 || ARGV[0] == 'piedra' && eleccion_pc == 0
-  puts "Computador juega #{opciones_pc[eleccion_pc]}"
-  puts 'Empataste'
-elsif ARGV[0]=='tijera'&& eleccion_pc == 1 || ARGV[0] == 'piedra' && eleccion_pc == 2 || ARGV[0] == 'papel' && eleccion_pc == 0
-  puts "Computador juega #{opciones_pc[eleccion_pc]}"
-  puts 'Ganaste'
+  if ARGV[0]== eleccion_pc
+    puts 'Empataste'
+  elsif ARGV[0]=='tijera'&& eleccion_pc == 1 || ARGV[0] == 'piedra' && eleccion_pc == 2 || ARGV[0] == 'papel' && eleccion_pc == 0
+    puts 'Ganaste'
+  else
+    puts 'Perdiste'
+  end
 else
-  puts "Argumento inválido: Debe ser piedra, papel o tijera."
+  puts "El parametro ingresado es invalido"
 end

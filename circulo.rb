@@ -7,7 +7,7 @@ if eleccion == 1
 elsif eleccion ==2
   puts "El perimetro del circulo es #{ARGV[0].to_i*2*Math::PI}"
 elsif eleccion == 3
-  puts "El area del circulo es #{ARGV[0].to_i**2*Math::PI}" 
+  puts "El area del circulo es #{ARGV[0].to_i**2*Math::PI}"
 else
   puts  "La opcion elegida no es correcta"
 end
