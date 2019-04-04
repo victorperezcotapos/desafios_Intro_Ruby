@@ -8,12 +8,4 @@ distancias[1]= Math.sqrt((coordenada_x[0]-coordenada_x[2])**2+(coordenada_y[0]-c
 distancias[2]= Math.sqrt((coordenada_x[0]-coordenada_x[3])**2+(coordenada_y[0]-coordenada_y[3])**2)
 distancias[3]= Math.sqrt((coordenada_x[0]-coordenada_x[4])**2+(coordenada_y[0]-coordenada_y[4])**2)
 
-if distancias[0] < distancias[1] && distancias[0] < distancias[2] && distancias[0] < distancias[3]
-  puts "#{coordenada_x[1]},#{coordenada_y[1]}"
-elsif distancias[1] < distancias[2] && distancias[1] < distancias[3]
-  puts "#{coordenada_x[2]},#{coordenada_y[2]}"
-elsif distancias[2] < distancias[3]
-  puts "#{coordenada_x[3]},#{coordenada_y[3]}"
-else
-  puts "#{coordenada_x[4]},#{coordenada_y[4]}"
-end
+puts "#{coordenada_x[distancias.index(distancias.min)+1]},#{coordenada_y[distancias.index(distancias.min)+1]}"
