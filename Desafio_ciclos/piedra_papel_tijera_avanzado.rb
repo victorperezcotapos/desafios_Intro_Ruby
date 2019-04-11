@@ -17,7 +17,8 @@ while (termino==false)
     puts "el Jugador 1 ha jugado #{jugadas[eleccion_j1-1]}"
     termino = true
     break
-  end#Turno Jugador 2
+  end
+#Turno Jugador 2
   puts "Turno jugador dos:\n1. Piedra \n2. Papel\n3. Tijeras \n4. Salir"
   eleccion_j2 = gets().to_i
 #Validacion eleccion J2
