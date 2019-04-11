@@ -13,7 +13,7 @@ while (termino==false)
   end
 
   if eleccion ==4
-    puts "el Jugador 1 ha jugado #{jugadas[eleccion]}"
+    puts "has seleccionado salir, nos vemos"
     termino = true
     break
   end
