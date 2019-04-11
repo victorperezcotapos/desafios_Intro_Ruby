@@ -1,84 +1,84 @@
 
 patron1=""
 ARGV[0].to_i.times do |i|
-  patron1+=(i+1).to_s
+  puts patron1+=(i+1).to_s
 end
-puts patron1
 
 def letra_o(n)
   n.times do |i|
-    if i%4 == 0
-      puts "*****"
-    else
-      puts "*   *"
+    n.times do |j|
+      if i==0||i==n-1||j==0||j==n-1
+        print "*"
+      else print " "
+      end
     end
+    print "\n"
   end
 end
 
 
 def letra_i(n)
   n.times do |i|
-    if i%4 == 0
-      puts "*****"
-    else
-      puts "  *  "
+    n.times do |j|
+      if i==0||i==n-1||j==(n-1)/2
+        print "*"
+      else print " "
+      end
     end
+    print "\n"
   end
 end
 
 def letra_z(n)
   n.times do |i|
-    if i%4 == 0
-      puts "*****"
-    elsif i%4 ==3
-      puts " *   "
-    elsif i%4 ==2
-      puts "  *  "
-    elsif i%4 == 1
-      puts "   * "
+    n.times do |j|
+      if i==0||i==n-1||j==n-i-1
+        print "*"
+      else print " "
+      end
     end
+    print "\n"
   end
 end
 
 def letra_x(n)
   n.times do |i|
-    if i%4 == 0
-      puts "*   *"
-    elsif i%4 ==1 || i%4 ==3
-      puts " * * "
-    elsif i%4 ==2
-      puts "  *  "
+    n.times do |j|
+      if j==n-i-1 || j==i
+        print "*"
+      else print " "
+      end
     end
+    print "\n"
   end
 end
 
 def numero_cero(n)
   n.times do |i|
-    if i%4 == 0
-      puts "*****"
-    elsif i%4 ==1
-      puts "**  *"
-    elsif i%4 ==2
-      puts "* * *"
-    elsif i%4 == 3
-      puts "*  **"
+    n.times do |j|
+      if i==0||i==n-1||j==0||j==n-1|| j==i
+        print "*"
+      else print " "
+      end
     end
+    print "\n"
   end
 end
 
 def navidad(n)
   n.times do |i|
-    if i%7 == 0 || i%7 == 4 || i%7 == 5
-      puts "   *  "
-    elsif i%7 ==1
-      puts "  * * "
-    elsif i%7 ==2 || i%7 == 6
-      puts " * * * "
-    elsif i%7 == 3
-      puts " *****  "
+    n.times do |j|
+      if i==(n-1)/2||j==(n-1)/2||j>=(n-1)/2-i&&i<=3*(n-1)/5&&j<=i+(n-1)/2||i==n-1&&j>=(n)/8&&j<=7*(n)/8
+        print "*"
+      else print " "
+      end
     end
+    print "\n"
   end
 end
+
+
+
 
 puts "letra_o"
 letra_o(ARGV[0].to_i)
