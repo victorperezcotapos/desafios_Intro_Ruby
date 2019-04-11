@@ -68,15 +68,33 @@ end
 def navidad(n)
   n.times do |i|
     n.times do |j|
-      if i==(n-1)/2||j==(n-1)/2||j>=(n-1)/2-i&&i<=3*(n-1)/5&&j<=i+(n-1)/2||i==n-1&&j>=(n)/8&&j<=7*(n)/8
-        print "*"
-      else print " "
+      if i<=3*(n-1)/5
+        if j>=(n-1)/2-i && j<=i+(n-1)/2
+          if i%2==1&&j%2==1
+            print "*"
+          elsif i%2==0&&j%2==0
+            print "*"
+          else print " "
+          end
+          else print " "
+        end
+      else
+        if j==(n-1)/2&&i!=n-1
+          print "*"
+        elsif i==n-1&&j>=(n)/8&&j<=7*(n)/8
+          if i%2==1&&j%2==1
+            print "*"
+          elsif i%2==0&&j%2==0
+            print "*"
+          else print " "
+          end
+        else print " "
+        end
       end
     end
     print "\n"
   end
 end
-
 
 
 
