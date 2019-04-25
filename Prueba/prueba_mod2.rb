@@ -25,5 +25,19 @@ end
 
 link = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000'
 key = 'api_key=GQNgU42mWWfWJbOTift94xBCHHP4FobGSrcrflGD'
-puts request(link,key)["photos"][0]["img_src"]
 build_web_page(request(link,key))
+
+def photos_count(data)
+  output = {}
+  data["photos"].each do |photo|
+    aux = photo["camera"]["name"]
+    if output[aux] == nil
+      output[aux] = 1
+    else
+      output[aux] += 1
+    end
+  end
+  return output
+end
+
+puts photos_count(request(link,key))
