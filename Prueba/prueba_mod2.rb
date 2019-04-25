@@ -15,11 +15,11 @@ def request(url_requested,api_key)
 end
 
 def build_web_page(data)
-  html = "<html>\n<head>\n</head>\n<body>\n<ul>\n"
+  html = "<html>\n <head>\n </head>\n <body>\n    <ul>\n"
   data["photos"].each do |hash|
-    html += "<li><img src=\"#{hash["img_src"]}\"></li>\n"
+    html += "     <li><img src=\"#{hash["img_src"]}\"></li>\n"
   end
-  html += "</ul>\n</body>\n</html>"
+  html += "   </ul>\n </body>\n</html>"
   File.write('output.html', html)
 end
 
