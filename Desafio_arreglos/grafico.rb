@@ -1,6 +1,4 @@
-
 multiplicador = 2
-
 grafico = []
 ARGV.length.times do |i|
   grafico[i]="|"
